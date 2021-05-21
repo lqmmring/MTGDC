@@ -182,6 +182,13 @@ References:
 ###### 2. Genomics, X. J. C. B. 1.3 million brain cells from E18 mice. (2017).
 ###### 3. Franzen, O., Gan, L. M. & Bjorkegren, J. L. M. PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data. Database (Oxford) 2019.
 
+## Acknowledgment
+
+Part of the code are from following paper:
+###### 1. Bai S, Zhou Z, Wang J, et al. Ensemble diffusion for retrieval[C]//Proceedings of the IEEE International Conference on Computer Vision. 2017: 774-783.
+
+The authors would like to appreciate the support and guidance from Dr. G.H. Wang and Dr. J. Li. 
+
 ## Maintenance
 
-If there's any questions / problems regarding scAIDE, please feel free to contact Ken Xie - xkk17@mails.tsinghua.edu.cn and Huang Yu - yuhuang-cst@foxmail.com. Thank you!
+If there's any questions / problems about MTGDC, please feel free to contact Q.M. Liu - cslqm@hit.edu.cn. Thank you!
