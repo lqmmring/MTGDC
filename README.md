@@ -195,8 +195,7 @@ toc
 <img width="400" height="300" src="figures/Purity_compared_algorithm_on_sim_data.png"/>
 
 <figure class="half">
-    <img width="400" height="300" src="figures/NMI_compared_algorithm_on_real_data.png"/>
-    <img width="400" height="300" src="figures/ARI_compared_algorithm_on_real_data.png"/>
+    <img width="150" height="150" src="figures/NMI_compared_algorithm_on_real_data.png"/><img width="150" height="150" src="figures/ARI_compared_algorithm_on_real_data.png"/>
 </figure>
 
 
