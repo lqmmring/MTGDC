@@ -18,10 +18,10 @@
     - [Multi-scale Affinity Learning](#--Multi-scale-Affinity-Learning)
     - [Tensor Graph Diffusion Learning and Mixture Operator](#--Tensor-Graph-Diffusion-Learning-and-Mixture-Operator)
     - [Spectral Clustering](#--Spectral-Clustering)
-     - [Clustering Evalution](#--Clustering-Evalution)
- - [Results](#Results)
-   - [Scalability](#--Scalability)
-   - [Implementation Time](#--Implementation-Time)
+    - [Clustering Evalution](#--Clustering-Evalution)
+- [Results](#Results)
+    - [Scalability](#--Scalability)
+    - [Implementation Time](#--Implementation-Time)
 - [Acknowledgment](#Acknowledgment)
 - [Maintenance](#Maintenance)
 
@@ -115,7 +115,6 @@ A demo is provided in [run](https://github.com/lqmmring/MTGDC/blob/main/run.m) f
 
 ### - Preprocessing 
 The input is configured as n cells (rows) by m genes (columns).
-
 ```matlab
 clc;
 clear;
@@ -185,6 +184,9 @@ toc
 ## Results
 
 ### - Scalability
+![NMI](figures/NMI_compared_algorithm_on_real_data.png)
+![SIM-NMI](figures/NMI_compared_algorithm_on_sim_data.png)
+
 
 ### - Implementation Time
 
