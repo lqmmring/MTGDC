@@ -9,8 +9,10 @@
 - [Introduction](#Introduction)
 - [Installation](#Installation)
     - [Requirement](#--required-installations)
-    - [Data](#--Data)
+    - [Real Data](#--Real Data)
+    - [Simulated Data](#--Simulated Data)
     - [Files](#--Files)
+    - [Baselines](#--Baselines)
 - [Example Usage](#example-usage)
     - [Preprocessing](#--Preprocessing)
     - [AIDE](#--AIDE)
@@ -43,10 +45,8 @@ Part of the code are from following paper:
 
 To use, please download the MTGDC folder and follow the instructions
 
-### - Data
-
 ### - Real Data
-we selected 12 public scRNA-seq datasets to verify the performance of clustering analysis
+we selected 12 public scRNA-seq datasets to verify the performance of clustering analysis. The data is stored as the mat format in the folder [Data](https://github.com/lqmmring/MTGDC/tree/main/Data).
 
 - [Pollen](https://www.ncbi.nlm.nih.gov/sra?term=SRP041736)
 ###### 1. Pollen, A.A., et al., Low-coverage single-cell mRNA sequencing reveals cellular heterogeneity and activated signaling pathways in developing cerebral cortex. Nature biotechnology, 2014. 32(10): p. 1053.
@@ -73,7 +73,6 @@ we selected 12 public scRNA-seq datasets to verify the performance of clustering
 - [Zeisel](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60361)
 ###### 12. Zeisel, A., et al., Cell types in the mouse cortex and hippocampus revealed by single-cell RNA-seq. Science, 2015. 347(6226): p. 1138-1142.
 
-The data is stored as the mat format in the folder [Data](https://github.com/lqmmring/MTGDC/tree/main/Data).
 
 ### - Simulated Data
 we evaluated our method on simulated datasets. Synthetic datasets were simulated by the R package [*Splatter*](https://github.com/Oshlack/splatter-paper). Thed parameters of simulated data are provided in [splatter](https://github.com/lqmmring/MTGDC/blob/main/splatter.R). 
