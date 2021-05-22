@@ -194,11 +194,9 @@ toc
 <img width="400" height="300" src="figures/ACC_compared_algorithm_on_sim_data.png"/>
 <img width="400" height="300" src="figures/Purity_compared_algorithm_on_sim_data.png"/>
 
-![Overview](figures/overview.png)![Overview](figures/overview.png)
-
 <figure class="half">
-    <img src="figures/NMI_compared_algorithm_on_real_data.png">
-    <img src="figures/NMI_compared_algorithm_on_real_data.png">
+    <img width="400" height="300" src="figures/NMI_compared_algorithm_on_real_data.png"/>
+    <img width="400" height="300" src="figures/ARI_compared_algorithm_on_real_data.png"/>
 </figure>
 
 
