@@ -1,7 +1,8 @@
 # MTGDC
 
 ======================
-> MTGDC is an unsupervised clustering framework for single-cell RNA-seq data. The MTGDC has the following mechanisms: 1) To achieve the purpose of mining potential similarity distributions among cells under a large amount of noise, we design a multi-scale affinity learning method to construct a fully connected graph between cells; 2) For each affinity matrix, an efficient tensor graph diffusion learning framework is proposed to learn high-order in context of cells with multi-scale affinity matrices.
+> MTGDC is an unsupervised clustering framework for single-cell RNA-seq data. MTGDC can learn global topological information between cells from multiple scales and use a simple and efficient tensor diffusion update algorithm to spread the high-order cell relationship graph to its neighbors until convergence to global stable state which preserves local and global cell topology structure.
+To achieve the purpose of mining potential similarity distributions among cells under a large amount of noise, we design a multi-scale affinity learning method to construct a fully connected graph between cells; 2) For each affinity matrix, an efficient tensor graph diffusion learning framework is proposed to learn high-order in context of cells with multi-scale affinity matrices.
 > 
 > 
 
@@ -11,8 +12,9 @@
 ## Table of content
 - [Introduction](#Introduction)
 - [Installation](#Installation)
-    - [Required Packages](#--required-installations)
-    - [Install](#--Install)
+    - [Requirement](#--required-installations)
+    - [Data](#--Data)
+    - [Files](#--Files)
 - [Example Usage](#example-usage)
     - [Preprocessing](#--Preprocessing)
     - [AIDE](#--AIDE)
@@ -25,11 +27,11 @@
 - [Maintenance](#Maintenance)
 
 ## Introduction
-There are three main parts to this clustering framework: AIDE embedding, clustering (RPH-kmeans), and biological analysis.
+The algorithm has the following mechanisms: Multi-scale Affinity Learning, Tensor Graph Diffusion Learning, and Mixture Operator.
 
-- **AIDE**: autoencoder-imputed distance-preserved embedding (a novel deep learning architecture that learns a good representation of single-cell data accounting for biological noise)
-- **RPH-kmeans**: Random projection hashing based k-means algorithm (a novel algorithm which improves the detection of rare cell types)
-- **biological analysis**: Biological analytics code are packed into an R package, scAIDE.
+- **Multi-scale Affinity Learning**: To achieve the purpose of mining potential similarity distributions among cells under a large amount of noise, we design a multi-scale affinity learning method to construct a fully connected graph between cells.
+- **Tensor Graph Diffusion Learning**: For each affinity matrix, we propose an efficient tensor graph diffusion learning framework to learn high-order in context of cells with multi-scale affinity matrices.
+- **Mixture Operator**: Finally, we mix the multi-scale tensor graph together to obtain the final complete high-order affinity matrix and apply it to spectral clustering. 
 
 
 ## Installation
