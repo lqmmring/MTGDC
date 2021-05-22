@@ -43,7 +43,6 @@ Part of the code are from following paper:
 ###### Bai S, Zhou Z, Wang J, et al. Ensemble diffusion for retrieval[C]//Proceedings of the IEEE International Conference on Computer Vision. 2017: 774-783.
 
 ### - Install
-
 To use, please download the MTGDC folder and follow the instructions
 
 ### - Real Data
@@ -80,7 +79,6 @@ We evaluated our method on simulated datasets. Synthetic datasets were simulated
 The data is stored as the mat format in the folder [Sim-Data](https://github.com/lqmmring/MTGDC/tree/main/Data/Sim-Data) 
 
 ### - Files  Illustration
-
 - [MTGDC](https://github.com/lqmmring/MTGDC/blob/main/MTGDC.m): main MTGDC algorithm consisting of the three steps.
 - [NormalizeFea](https://github.com/lqmmring/MTGDC/blob/main/LIB/NormalizeFea.m): provide the normalized processing. 
 - [adaptiveGaussian](https://github.com/lqmmring/MTGDC/blob/main/LIB/adaptiveGaussian.m): provide the multi-scale affinity learning.
@@ -195,6 +193,14 @@ toc
 
 <img width="400" height="300" src="figures/ACC_compared_algorithm_on_sim_data.png"/>
 <img width="400" height="300" src="figures/Purity_compared_algorithm_on_sim_data.png"/>
+
+![Overview](figures/overview.png)![Overview](figures/overview.png)
+
+<figure class="half">
+    <img src="figures/NMI_compared_algorithm_on_real_data.png">
+    <img src="figures/NMI_compared_algorithm_on_real_data.png">
+</figure>
+
 
 ### - Implementation Time
 <img width="600" height="450" src="figures/run_time.png"/>
