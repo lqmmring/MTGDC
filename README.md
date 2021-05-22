@@ -15,13 +15,13 @@
     - [Baselines](#--Baselines)
 - [Example Usage](#example-usage)
     - [Preprocessing](#--Preprocessing)
-    - [Multi-scale Affinity Learning](#-- Multi-scale-Affinity-Learning)
+    - [Multi scale Affinity Learning](#-- Multi-scale-Affinity-Learning)
     - [Tensor Graph Diffusion Learning and Mixture Operator](#--Tensor-Graph-Diffusion-Learning-and-Mixture-Operator)
     - [Spectral Clustering](#--Spectral-Clustering)
-    - [Clustering Evalution](#--Clustering-Evalution)
+     - [Clustering Evalution](#--Clustering-Evalution)
   - [Results](#--Results)
-        - [Scalability](#--scalability)
-        - [Implementation Time](#--implementation-time)
+   - [Scalability](#--Scalability)
+   - [Implementation Time](#--Implementation-Time)
 - [Acknowledgment](#Acknowledgment)
 - [Maintenance](#Maintenance)
 
@@ -144,7 +144,7 @@ NorTempvData=NormalizeFea(double(TempvData));
 [tempN,tempD] = size(TempvData);
 ```
 
-### - Multi-scale Affinity Learning
+### - Multi scale Affinity Learning
 ```matlab
 tic
 disp('Affinity learning......');
@@ -184,14 +184,6 @@ toc
 ```
 
 ## - Results
-The annotated labels for PBMC and Neural datasets are included in the folder 'Predicted labels'. The .RData files include the predicted annotated labels for these datasets. </br>
-</br>
-The following figures show the results for the PBMC 68k dataset and the 1.3 million neural dataset. 
-
-<p align="center">
-  <img src=figures/pbmc.png alt="pbmc" title="pbmc" align="center" height="300">
-  <img src= figures/neural.png alt="neural" title="neural" align="center" height="300">
-</p>
 
 ### - Scalability
 
