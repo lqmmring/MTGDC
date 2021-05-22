@@ -11,16 +11,17 @@
     - [Requirement](#--required-installations)
     - [Real Data](#--Real-Data)
     - [Simulated Data](#--Simulated-Data)
-    - [Files](#--Files)
+    - [Files  Illustration](#--Files-Illustration)
     - [Baselines](#--Baselines)
 - [Example Usage](#example-usage)
     - [Preprocessing](#--Preprocessing)
-    - [AIDE](#--AIDE)
-    - [RPH-kmeans](#--RPH-kmeans)
-    - [Biological Analysis](#--biological-analysis)
-    - [Example Results](#--examples-results)
-    - [Scalability](#--scalability)
-- [Citation](#citation-&-references)
+    - [Multi-scale Affinity Learning](#-- Multi-scale-Affinity-Learning)
+    - [Tensor Graph Diffusion Learning and Mixture Operator](#--Tensor-Graph-Diffusion-Learning-and-Mixture-Operator)
+    - [Spectral Clustering](#--Spectral-Clustering)
+    - [Clustering Evalution](#--Clustering-Evalution)
+  - [Results](#--Results)
+        - [Scalability](#--scalability)
+        - [Implementation Time](#--implementation-time)
 - [Acknowledgment](#Acknowledgment)
 - [Maintenance](#Maintenance)
 
@@ -79,7 +80,7 @@ we evaluated our method on simulated datasets. Synthetic datasets were simulated
 
 The data is stored as the mat format in the folder [Sim-Data](https://github.com/lqmmring/MTGDC/tree/main/Data/Sim-Data) 
 
-### - Files
+### - Files  Illustration
 
 - [MTGDC](https://github.com/lqmmring/MTGDC/blob/main/MTGDC.m): main MTGDC algorithm consisting of the three steps.
 - [NormalizeFea](https://github.com/lqmmring/MTGDC/blob/main/LIB/NormalizeFea.m): provide the normalized processing. 
@@ -111,7 +112,7 @@ We selected several widely used scRNA-seq data clustering tools, including graph
 ###### 20. Zheng, R., et al., SinNLRR: a robust subspace clustering method for cell type detection by nonnegative and low rank representation. Bioinformatics, 2019.
 
 ## Example Usage:
-A demo is provided in [run](https://github.com/lqmmring/MTGDC/blob/main/run.m) file, showing details of data preprocessing, and clustering with MTGDC. Two datasets (`Mouse bladder` and `Mouse retina`) are also given.
+A demo is provided in [run](https://github.com/lqmmring/MTGDC/blob/main/run.m) file, showing details of data preprocessing, and clustering with MTGDC. 
 
 ### - Preprocessing 
 The input is configured as n cells (rows) by m genes (columns).
@@ -123,7 +124,7 @@ close all;
 addpath('MeasureTools');
 addpath('LIB');
 % compile_func(0);
-load('data/Data_Marques_log.mat'); % load data
+load('Data/Data_Marques_log.mat'); % load data
 % ncell=5000;
 X=in_X;
 % ViewN = 3;
@@ -163,28 +164,26 @@ toc
 
 ### - Spectral Clustering
 ```matlab
-% tic
+tic
 disp('Spectral clustering......');
 out_G = SpectralClustering(WW_MerG,kmeansK);
 out_KNN = SpectralClustering(WW_MerKNN,kmeansK);
-% toc
 toc
 ```
 
 ### - Clustering Evalution
 ```matlab
-% tic
+tic
 [result_G,Con_G] = ClusteringMeasure(label, out_G');  % [8: ACC MIhat Purity ARI F-score Precision Recall Contingency];
 [result_KNN,Con_KNN] = ClusteringMeasure(label, out_KNN'); 
 nmi_G = Cal_NMI(label, out_G');
 nmi_KNN = Cal_NMI(label, out_KNN');
 RES_G = [result_G,nmi_G];
 RES_KNN=[result_KNN,nmi_KNN];
-% toc
 toc
 ```
 
-### - Example results
+## - Results
 The annotated labels for PBMC and Neural datasets are included in the folder 'Predicted labels'. The .RData files include the predicted annotated labels for these datasets. </br>
 </br>
 The following figures show the results for the PBMC 68k dataset and the 1.3 million neural dataset. 
@@ -195,23 +194,9 @@ The following figures show the results for the PBMC 68k dataset and the 1.3 mill
 </p>
 
 ### - Scalability
-The time taken to cluster 1.3 million cells (with roughly 20,000 genes) is less than 30 minutes, using 7GB of memory.
 
-## File Illustration
-- `sc_cluster`: Codes and results of clustering experiments using AIDE and RPH-kmeans.
-- `baseline`: Codes and results of clustering experiments using baseline tools (e.g. DCA, MAGIC, scScope, scDeepCluster, ...).
-- `demo`: A demo of data preprocessing, embedding with AIDE and clustering with RPH-kmeans.
-- `scAIDE`: The R package of biological analysis.
-- `figures`: Figures of README
+### - Implementation Time
 
-## Citation & References
-
-scAIDE: clustering of large-scale single-cell RNA-seq data reveals putative and rare cell types. NAR Genomics and Bioinformatics 2020.
-
-References:
-###### 1. Zheng, G. X. et al. (2017) Massively parallel digital transcriptional profiling of single cells. Nature Communications 8, 14049, doi:10.1038/ncomms14049
-###### 2. Genomics, X. J. C. B. 1.3 million brain cells from E18 mice. (2017).
-###### 3. Franzen, O., Gan, L. M. & Bjorkegren, J. L. M. PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data. Database (Oxford) 2019.
 
 ## Acknowledgment
 
