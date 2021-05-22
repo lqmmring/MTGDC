@@ -1,9 +1,6 @@
 # MTGDC
-
-======================
-> MTGDC is an unsupervised clustering framework for single-cell RNA-seq data. MTGDC can learn global topological information between cells from multiple scales and use a simple and efficient tensor diffusion update algorithm to spread the high-order cell relationship graph to its neighbors until convergence to global stable state which preserves local and global cell topology structure.
-To achieve the purpose of mining potential similarity distributions among cells under a large amount of noise, we design a multi-scale affinity learning method to construct a fully connected graph between cells; 2) For each affinity matrix, an efficient tensor graph diffusion learning framework is proposed to learn high-order in context of cells with multi-scale affinity matrices.
-> 
+==============================================================================================================
+> MTGDC is an unsupervised clustering framework for single-cell RNA-seq data. MTGDC can learn global topological information between cells from multiple scales and use a simple and efficient tensor diffusion update algorithm to spread the high-order cell relationship graph to its neighbors until convergence to global stable state which preserves local and global cell topology structure.To achieve the purpose of mining potential similarity distributions among cells under a large amount of noise, we design a multi-scale affinity learning method to construct a fully connected graph between cells.
 > 
 
 ## Overview
@@ -33,27 +30,39 @@ The algorithm has the following mechanisms: Multi-scale Affinity Learning, Tenso
 - **Tensor Graph Diffusion Learning**: For each affinity matrix, we propose an efficient tensor graph diffusion learning framework to learn high-order in context of cells with multi-scale affinity matrices.
 - **Mixture Operator**: Finally, we mix the multi-scale tensor graph together to obtain the final complete high-order affinity matrix and apply it to spectral clustering. 
 
-
 ## Installation
 ### - Required Installations
-AIDE and RPH-kmeans are implemented in python, biological analytics code in R.
+The software is coded using MATLAB and is free for academic purposes.
 
-- Python3: tensorflow 1.14, numpy, scipy, scikit_learn, tqdm, seaborn
-- R: parallel, gmp, ggplot2
+- MATLAB: MATLAB R2019b
+- R: Seurat, splatter, ggplot2
+
+Part of the code are from following paper:
+###### 1. Bai S, Zhou Z, Wang J, et al. Ensemble diffusion for retrieval[C]//Proceedings of the IEEE International Conference on Computer Vision. 2017: 774-783.
 
 ### - Install
-- AIDE: please refer to [https://github.com/tinglabs/aide](https://github.com/tinglabs/aide) for details.
-- RPH-kmeans: please refer to [https://github.com/tinglabs/rph_kmeans](https://github.com/tinglabs/rph_kmeans) for details.
-- scAIDE (R package):
 
-	```r
-	require(devtools)
-	setwd("where scAIDE folder is located")
-	install("scAIDE")
-	```
+To use, please download the MTGDC folder and follow the instructions
+
+### - Data
+- [MTGDC](https://github.com/lqmmring/MTGDC/blob/main/MTGDC.m): main MTGDC algorithm consisting of the three steps.
+- [NormalizeFea](https://github.com/lqmmring/MTGDC/blob/main/LIB/NormalizeFea.m): provide the normalized processing. 
+- [adaptiveGaussian](https://github.com/lqmmring/MTGDC/blob/main/LIB/adaptiveGaussian.m): provide the multi-scale affinity learning.
+- [IterativeDiffusionTPGKNN](https://github.com/lqmmring/MTGDC/blob/main/LIB/IterativeDiffusionTPGKNN.m):this code is an implementation of the diffusion process.
+- [knnSparse](https://github.com/lqmmring/MTGDC/blob/main/LIB/knnSparse.m): sparse the affinity matrix by k-nearst neighbor.
+- [mergeW](https://github.com/lqmmring/MTGDC/blob/main/LIB/mergeW.m): this code is an implementation of the mixture of diffusion affinity matrices.
+
+### - Files
+
+- [MTGDC](https://github.com/lqmmring/MTGDC/blob/main/MTGDC.m): main MTGDC algorithm consisting of the three steps.
+- [NormalizeFea](https://github.com/lqmmring/MTGDC/blob/main/LIB/NormalizeFea.m): provide the normalized processing. 
+- [adaptiveGaussian](https://github.com/lqmmring/MTGDC/blob/main/LIB/adaptiveGaussian.m): provide the multi-scale affinity learning.
+- [IterativeDiffusionTPGKNN](https://github.com/lqmmring/MTGDC/blob/main/LIB/IterativeDiffusionTPGKNN.m):this code is an implementation of the diffusion process.
+- [knnSparse](https://github.com/lqmmring/MTGDC/blob/main/LIB/knnSparse.m): sparse the affinity matrix by k-nearst neighbor.
+- [mergeW](https://github.com/lqmmring/MTGDC/blob/main/LIB/mergeW.m): this code is an implementation of the mixture of diffusion affinity matrices.
 
 ## Example Usage:
-A demo is provided in [demo](https://github.com/tinglabs/scAIDE/tree/master/demo) folder, showing details of data preprocessing, embedding with AIDE and clustering with RPH-kmeans. Two datasets (`Mouse bladder` and `Mouse retina`) are also given.
+A demo is provided in [run](https://github.com/lqmmring/MTGDC/blob/main/run.m) file, showing details of data preprocessing, and clustering with MTGDC. Two datasets (`Mouse bladder` and `Mouse retina`) are also given.
 
 ### - Preprocessing
 A pre-processed single-cell data is accepted, provided that it is normalized and log-transformed (for optimal performance). 
@@ -185,9 +194,6 @@ References:
 ###### 3. Franzen, O., Gan, L. M. & Bjorkegren, J. L. M. PanglaoDB: a web server for exploration of mouse and human single-cell RNA sequencing data. Database (Oxford) 2019.
 
 ## Acknowledgment
-
-Part of the code are from following paper:
-###### 1. Bai S, Zhou Z, Wang J, et al. Ensemble diffusion for retrieval[C]//Proceedings of the IEEE International Conference on Computer Vision. 2017: 774-783.
 
 The authors would like to appreciate the support and guidance from Dr. G.H. Wang and Dr. J. Li. 
 
