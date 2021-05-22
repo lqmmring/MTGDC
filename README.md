@@ -186,7 +186,8 @@ toc
 ### - Scalability
 ![NMI](figures/NMI_compared_algorithm_on_real_data.png)
 ![SIM-NMI](figures/NMI_compared_algorithm_on_sim_data.png)
-<img width="150" height="150" src="figures/NMI_compared_algorithm_on_sim_data.png"/>
+<img width="450" height="450" src="figures/NMI_compared_algorithm_on_sim_data.png"/>
+<img width="450" height="450" src="figures/NMI_compared_algorithm_on_sim_data.png"/>
 
 ### - Implementation Time
 
