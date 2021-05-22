@@ -1,7 +1,6 @@
 function [W,W_knn]=adaptiveGaussian(data,K,viewN)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% This code is an implementation of adaptive Gaussian affinity used in:
-%%% "Affinity Learning via a Diffusion Process for Subspace Clustering"
+%%% This code is an implementation of Multi-scale Affinity Learning
 %%% Note that the self-affinity is defined, and it's not simply 0 or 1
 %%% By Qiaoming Liu (cslqm@hit.edu.cn)
 %%% Last Update 07/12/2020
