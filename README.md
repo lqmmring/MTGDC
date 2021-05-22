@@ -15,11 +15,11 @@
     - [Baselines](#--Baselines)
 - [Example Usage](#example-usage)
     - [Preprocessing](#--Preprocessing)
-    - [Multi scale Affinity Learning](#-- Multi-scale-Affinity-Learning)
+    - [Multi-scale Affinity Learning](#--Multi-scale-Affinity-Learning)
     - [Tensor Graph Diffusion Learning and Mixture Operator](#--Tensor-Graph-Diffusion-Learning-and-Mixture-Operator)
     - [Spectral Clustering](#--Spectral-Clustering)
      - [Clustering Evalution](#--Clustering-Evalution)
-  - [Results](#--Results)
+ - [Results](#Results)
    - [Scalability](#--Scalability)
    - [Implementation Time](#--Implementation-Time)
 - [Acknowledgment](#Acknowledgment)
@@ -47,7 +47,7 @@ Part of the code are from following paper:
 To use, please download the MTGDC folder and follow the instructions
 
 ### - Real Data
-we selected 12 public scRNA-seq datasets to verify the performance of clustering analysis. The data is stored as the mat format in the folder [Data](https://github.com/lqmmring/MTGDC/tree/main/Data).
+We selected 12 public scRNA-seq datasets to verify the performance of clustering analysis. The data is stored as the mat format in the folder [Data](https://github.com/lqmmring/MTGDC/tree/main/Data).
 
 - [Pollen](https://www.ncbi.nlm.nih.gov/sra?term=SRP041736)
 ###### 1. Pollen, A.A., et al., Low-coverage single-cell mRNA sequencing reveals cellular heterogeneity and activated signaling pathways in developing cerebral cortex. Nature biotechnology, 2014. 32(10): p. 1053.
@@ -74,9 +74,8 @@ we selected 12 public scRNA-seq datasets to verify the performance of clustering
 - [Zeisel](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE60361)
 ###### 12. Zeisel, A., et al., Cell types in the mouse cortex and hippocampus revealed by single-cell RNA-seq. Science, 2015. 347(6226): p. 1138-1142.
 
-
 ### - Simulated Data
-we evaluated our method on simulated datasets. Synthetic datasets were simulated by the R package [*Splatter*](https://github.com/Oshlack/splatter-paper). Thed parameters of simulated data are provided in [splatter](https://github.com/lqmmring/MTGDC/blob/main/splatter.R). 
+We evaluated our method on simulated datasets. Synthetic datasets were simulated by the R package [*Splatter*](https://github.com/Oshlack/splatter-paper). Thed parameters of simulated data are provided in [splatter](https://github.com/lqmmring/MTGDC/blob/main/splatter.R). 
 
 The data is stored as the mat format in the folder [Sim-Data](https://github.com/lqmmring/MTGDC/tree/main/Data/Sim-Data) 
 
@@ -183,7 +182,7 @@ RES_KNN=[result_KNN,nmi_KNN];
 toc
 ```
 
-## - Results
+## Results
 
 ### - Scalability
 
