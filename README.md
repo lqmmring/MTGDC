@@ -184,20 +184,20 @@ toc
 ## Results
 
 ### - Scalability
-<img width="600" height="450" src="figures/NMI_compared_algorithm_on_real_data.png"/>
-<img width="600" height="450" src="figures/ARI_compared_algorithm_on_real_data.png"/>
+<img width="400" height="300" src="figures/NMI_compared_algorithm_on_real_data.png"/>
+<img width="400" height="300" src="figures/ARI_compared_algorithm_on_real_data.png"/>
 
-<img width="600" height="450" src="figures/ACC_compared_algorithm_on_real_data.png"/>
-<img width="600" height="450" src="figures/Purity_compared_algorithm_on_real_data.png"/>
+<img width="400" height="300" src="figures/ACC_compared_algorithm_on_real_data.png"/>
+<img width="400" height="300" src="figures/Purity_compared_algorithm_on_real_data.png"/>
 
-<img width="600" height="450" src="figures/NMI_compared_algorithm_on_sim_data.png"/>
-<img width="600" height="450" src="figures/ARI_compared_algorithm_on_sim_data.png"/>
+<img width="400" height="300" src="figures/NMI_compared_algorithm_on_sim_data.png"/>
+<img width="400" height="300" src="figures/ARI_compared_algorithm_on_sim_data.png"/>
 
-<img width="600" height="450" src="figures/ACC_compared_algorithm_on_sim_data.png"/>
-<img width="600" height="450" src="figures/Purity_compared_algorithm_on_sim_data.png"/>
+<img width="400" height="300" src="figures/ACC_compared_algorithm_on_sim_data.png"/>
+<img width="400" height="300" src="figures/Purity_compared_algorithm_on_sim_data.png"/>
 
 ### - Implementation Time
-![time](figures/run_time.png)
+<img width="600" height="450" src="figures/run_time.png"/>
 
 ## Acknowledgment
 
