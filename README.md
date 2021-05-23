@@ -180,12 +180,17 @@ toc
 ```
 
 ## Results
+The clustering results of MTGDC and compared clustering algorithms
 
 ### - Scalability
+Comparison of NMI among MTGDC and eight clustering algorithms on 12 real datasets.
 <img width="600" height="450" src="figures/NMI_compared_algorithm_on_real_data.png"/>
+
+Comparison of NMI among MTGDC and eight clustering algorithms on 15 simulated datasets.
 <img width="600" height="450" src="figures/NMI_compared_algorithm_on_sim_data.png"/>
 
 ### - Implementation Time
+Speed analysis of MTGDC on Macosko dataset.
 <img width="600" height="450" src="figures/run_time.png"/>
 
 ## Acknowledgment
