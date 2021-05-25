@@ -120,7 +120,7 @@ close all;
 addpath('MeasureTools');
 addpath('LIB');
 % compile_func(0);
-load('Data/Data_Marques_log.mat'); % load data
+load('Data/Data_Buettner.mat'); % load data
 % ncell=5000;
 X=in_X;
 % ViewN = 3;
